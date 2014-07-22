@@ -17,10 +17,13 @@ public class JMusicPanel extends JPanel {
 	public String words = "fucknuggets";
 	public int line = 20;
 	public ArrayList<String> manywords;
+	public int selectY;
+	public int pageNum = 0;
 
 	public JMusicPanel() {
 		manywords = new ArrayList<String>();
 		listArts();
+		selectY = 3;
 	}
 
 	@Override
@@ -35,6 +38,7 @@ public class JMusicPanel extends JPanel {
 			line += 20;
 			i++;
 		}
+		g.drawRect(5, selectY, this.getWidth()-10, 20);
 	}
 
 	public void listArts() {

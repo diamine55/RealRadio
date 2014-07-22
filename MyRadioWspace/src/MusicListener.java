@@ -1,9 +1,8 @@
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.Statement;
+
 
 public class MusicListener implements KeyListener {
 
@@ -11,14 +10,55 @@ public class MusicListener implements KeyListener {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-			System.out.println("Moar FuckNuggets");
+		if (e.getKeyCode() == KeyEvent.VK_DOWN && MP.selectY < 203) {
+			//System.out.println("Moar FuckNuggets");
+			MP.line = 20;
+			MP.selectY += 20;
+			MP.repaint();
+			//System.out.println(MP.selectY);
+		}
+		if (e.getKeyCode() == KeyEvent.VK_UP && MP.selectY > 3) {
+		//	System.out.println("Mas FuckNugatos");
+			MP.line = 20;
+			MP.selectY -= 20;
+			MP.repaint();
+			//System.out.println(MP.selectY);
 		}
 		if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-
-			System.out.println("worked");
+			int whattt = (MP.selectY-3)/20;
+			System.out.println(whattt);
+		///	System.out
+			///		.println("Bet you expected fucknuggets...Nope. Chuck Testa");
 		}
 
+	}
+	
+	public void getPath(){
+		try {
+			Class.forName("org.sqlite.JDBC");
+			c = DriverManager.getConnection("jdbc:sqlite:test.db");
+
+			System.out.println("Opened database succggggggessfully");
+
+			stmt = c.createStatement();
+
+			ResultSet rs = stmt
+					.executeQuery("SELECT DISTINCT ARTIST FROM MUSIC;");
+			while (rs.next()) {
+				String artist = rs.getString("Artist");
+
+				System.out.println("ARTIST = " + artist);
+
+				// System.out.println();
+
+				manywords.add(artist);
+
+			}
+			rs.close();
+			stmt.close();
+
+			c.close();
+			System.out.println("Database Connection Closed");
 	}
 
 	@Override
