@@ -16,7 +16,8 @@ local.properties
 .settings/
 .loadpath
 test.db
-MyRadioWspace/test.db
+*.db
+
 
 # External tool builders
 .externalToolBuilders/
