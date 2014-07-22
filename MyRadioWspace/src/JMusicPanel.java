@@ -11,7 +11,10 @@ import java.util.ArrayList;
 import javax.swing.JPanel;
 
 public class JMusicPanel extends JPanel {
-
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7541731121709002749L;
 	private static Connection c = null;
 	Statement stmt = null;
 	public String words = "fucknuggets";

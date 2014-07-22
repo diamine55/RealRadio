@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.sql.Connection;
@@ -14,8 +15,17 @@ public class MusicListener implements KeyListener {
 		if (e.getKeyCode() == KeyEvent.VK_DOWN) {
 			System.out.println("Moar FuckNuggets");
 		}
-		if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+		if (e.getKeyCode() == KeyEvent.VK_SPACE) {
+			Main.frame.remove(Main.frame.findComponentAt(10, 10));
+			Main.mPanel.setBackground(Color.black);
+			Main.frame.removeKeyListener(Main.NL);
+			
+			KeyListener musicLis = new MusicListener();	//Need to make new key listener
+			Main.frame.addKeyListener(musicLis);	   	//
+			Main.frame.add(Main.jmPanel);
 
+			Main.frame.revalidate();
+			Main.jmPanel.loadSong(null);
 			System.out.println("worked");
 		}
 
@@ -23,7 +33,6 @@ public class MusicListener implements KeyListener {
 
 	@Override
 	public void keyReleased(KeyEvent arg0) {
-		// TODO Auto-generated method stub
 
 	}
 
