@@ -37,7 +37,7 @@ public class JMusicPanel extends JPanel {
 			Class.forName("org.sqlite.JDBC");
 			c = DriverManager.getConnection("jdbc:sqlite:test.db");
 
-			System.out.println("Opened database successfully");
+			System.out.println("Opened database succggggggessfully");
 
 			stmt = c.createStatement();
 

@@ -6,8 +6,8 @@ public class Main {
 
 	public static JFrame frame = new JFrame();
 
-	public static JBackgroundPanel bPanel = new JBackgroundPanel();
-	public static JMusicPanel mPanel = new JMusicPanel();
+	public static JBackgroundPanel bPanel;
+	public static JMusicPanel mPanel;
 
 	public static KeyListener NL;
 
@@ -18,9 +18,12 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-
+		System.out.println("first");
 		DatabaseCreation x = new DatabaseCreation();
 		DB = x;
+		
+		bPanel = new JBackgroundPanel();
+		mPanel = new JMusicPanel();
 
 		KeyListener foo = new NeedleListener(bPanel);
 		NL = foo;

@@ -12,9 +12,10 @@ public class DatabaseCreation {
 			Class.forName("org.sqlite.JDBC");
 			c = DriverManager.getConnection("jdbc:sqlite:test.db");
 
-			System.out.println("Opened database successfully");
+			System.out.println("Opened database successfzzzzully");
 
 			stmt = c.createStatement();
+			System.out.println("created statement");
 			String sql = "CREATE TABLE IF NOT EXISTS MUSIC "
 					+ "(ID INT PRIMARY KEY     NOT NULL,"
 					+ " ARTIST           TEXT, " + " ALBUM            TEXT, "
