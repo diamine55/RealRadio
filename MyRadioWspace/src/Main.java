@@ -12,8 +12,8 @@ public class Main {
 	public static KeyListener NL;
 
 	private static DatabaseCreation DB;
-	
-	public static JMusicPanel getMusPan(){
+
+	public static JMusicPanel getMusPan() {
 		return mPanel;
 	}
 
@@ -21,7 +21,7 @@ public class Main {
 		System.out.println("first");
 		DatabaseCreation x = new DatabaseCreation();
 		DB = x;
-		
+
 		bPanel = new JBackgroundPanel();
 		mPanel = new JMusicPanel();
 
@@ -34,6 +34,7 @@ public class Main {
 		frame.addKeyListener(NL);
 
 		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 	}
 

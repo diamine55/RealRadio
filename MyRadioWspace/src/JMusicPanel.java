@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.List;
 import java.sql.Connection;
@@ -26,9 +27,13 @@ public class JMusicPanel extends JPanel {
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		g.setColor(Color.white);
-		for (String i : manywords) {
-			g.drawString(i, 10, line);
-			line += 12;
+		g.setFont(new Font("TimesRoman", Font.PLAIN, 20));
+		int i = 0;
+		while (i < 11) {
+			String artistName = manywords.get(i);
+			g.drawString(artistName, 10, line);
+			line += 20;
+			i++;
 		}
 	}
 
@@ -48,10 +53,9 @@ public class JMusicPanel extends JPanel {
 
 				System.out.println("ARTIST = " + artist);
 
-				System.out.println();
+				// System.out.println();
 
 				manywords.add(artist);
-				System.out.println(line);
 
 			}
 			rs.close();
