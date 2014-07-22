@@ -13,11 +13,9 @@ public class Song {
 	}
 
 
-
 	public String getTitle() {
 		return title;
 	}
-
 
 
 	public void setTitle(String title) {
@@ -25,11 +23,9 @@ public class Song {
 	}
 
 
-
 	public String getFilepath() {
 		return filepath;
 	}
-
 
 
 	public void setFilepath(String filepath) {
@@ -37,11 +33,9 @@ public class Song {
 	}
 
 
-
 	public String getArtist() {
 		return artist;
 	}
-
 
 
 	public void setArtist(String artist) {
@@ -49,17 +43,14 @@ public class Song {
 	}
 
 
-
 	public String getAlbum() {
 		return album;
 	}
 
 
-
 	public void setAlbum(String album) {
 		this.album = album;
 	}
-	
 	
 
 }
