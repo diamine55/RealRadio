@@ -8,6 +8,7 @@ public class Main {
 
 	public static JBackgroundPanel bPanel;
 	public static JMusicPanel mPanel;
+	public static JMusicScreenPanel jmPanel;
 
 	public static KeyListener NL;
 
@@ -24,6 +25,7 @@ public class Main {
 
 		bPanel = new JBackgroundPanel();
 		mPanel = new JMusicPanel();
+		jmPanel = new JMusicScreenPanel();
 
 		KeyListener foo = new NeedleListener(bPanel);
 		NL = foo;

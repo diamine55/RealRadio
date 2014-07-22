@@ -53,9 +53,12 @@ public class NeedleListener implements KeyListener {
 				 */
 				Main.frame.remove(Jbb);
 				Main.mPanel.setBackground(Color.black);
-				KeyListener musicLis = new MusicListener();
 				Main.frame.removeKeyListener(Main.NL);
 				
+<<<<<<< HEAD
+=======
+				KeyListener musicLis = new MusicListener();
+>>>>>>> origin/master
 				Main.frame.addKeyListener(musicLis);
 				Main.frame.add(Main.mPanel);
 
