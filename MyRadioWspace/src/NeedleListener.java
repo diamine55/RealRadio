@@ -11,13 +11,11 @@ import javax.swing.JFrame;
 public class NeedleListener implements KeyListener {
 
 	private JBackgroundPanel Jbb;
-	public BufferedImage blank;
-	;
+	public BufferedImage blank;;
 
 	public NeedleListener(JBackgroundPanel Jbb) {
 		this.Jbb = Jbb;
 	}
-	
 
 	@Override
 	public void keyPressed(KeyEvent e) {
@@ -54,13 +52,8 @@ public class NeedleListener implements KeyListener {
 				Main.frame.remove(Jbb);
 				Main.mPanel.setBackground(Color.black);
 				Main.frame.removeKeyListener(Main.NL);
-				
 
 				KeyListener musicLis = new MusicListener();
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 				Main.frame.addKeyListener(musicLis);
 				Main.frame.add(Main.mPanel);
 
