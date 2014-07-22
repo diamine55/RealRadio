@@ -57,6 +57,10 @@ public class NeedleListener implements KeyListener {
 				
 
 				KeyListener musicLis = new MusicListener();
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 				Main.frame.addKeyListener(musicLis);
 				Main.frame.add(Main.mPanel);
 

@@ -24,19 +24,32 @@ public class MusicListener implements KeyListener {
 			MP.repaint();
 			// System.out.println(MP.selectY);
 		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 		if (e.getKeyCode() == KeyEvent.VK_ENTER) {
 			int whattt = (MP.selectY - 3) / 20;
 			System.out.println(whattt);
 			// / System.out
 			// / .println("Bet you expected fucknuggets...Nope. Chuck Testa");
 		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 		if (e.getKeyCode() == KeyEvent.VK_SPACE) {
 			Main.frame.remove(Main.frame.findComponentAt(10, 10));
 			Main.mPanel.setBackground(Color.black);
 			Main.frame.removeKeyListener(Main.NL);
 
+<<<<<<< HEAD
 			KeyListener musicLis = new MusicListener(); // Need to make new key
 														// listener
+=======
+			KeyListener musicLis = new MusicListener(); // Need to make new
+														// key listener
+>>>>>>> origin/master
 			Main.frame.addKeyListener(musicLis); //
 			Main.frame.add(Main.jmPanel);
 
@@ -73,7 +86,7 @@ public class MusicListener implements KeyListener {
 
 			c.close();
 			System.out.println("Database Connection Closed");
-	}
+		}
 
 	@Override
 	public void keyReleased(KeyEvent arg0) {
