@@ -18,29 +18,29 @@ public class JBackgroundPanel extends JPanel {
 
 	public JBackgroundPanel() {
 		try {
-			backG = ImageIO.read(new File(
-					"C:\\Users\\Matt\\Desktop\\RadImg\\tuner.jpg"));
+			backG = ImageIO.read(this.getClass().getResource(
+					"/Images/tuner.jpg"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
 		try {
-			needle = ImageIO.read(new File(
-					"C:\\Users\\Matt\\Desktop\\RadImg\\needle.png"));
+			needle = ImageIO.read(this.getClass().getResource(
+					"/Images/needle.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
 		try {
-			music = ImageIO.read(new File(
-					"C:\\Users\\Matt\\Desktop\\RadImg\\music.png"));
+			music = ImageIO.read(this.getClass().getResource(
+					"/Images/music.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
 		try {
-			other = ImageIO.read(new File(
-					"C:\\Users\\Matt\\Desktop\\RadImg\\othershit.png"));
+			other = ImageIO.read(this.getClass().getResource(
+					"/Images/othershit.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

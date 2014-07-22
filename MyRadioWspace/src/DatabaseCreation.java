@@ -32,6 +32,7 @@ public class DatabaseCreation {
 	}
 
 	public static void populateTable() {
+		///////////////////////////////////CHANGE MUSIC FOLDER PATH HERE///////////////////////////////////////////////////
 		String MusicFolder = "C:\\Users\\Matt\\Music\\Music";
 		int IDCount = 0;
 
