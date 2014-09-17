@@ -2,18 +2,13 @@ import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-
-import javax.imageio.ImageIO;
-import javax.swing.JFrame;
 
 public class NeedleListener implements KeyListener {
 
-	private JBackgroundPanel Jbb;
+	private JMainPanel Jbb;
 	public BufferedImage blank;;
 
-	public NeedleListener(JBackgroundPanel Jbb) {
+	public NeedleListener(JMainPanel Jbb) {
 		this.Jbb = Jbb;
 	}
 
@@ -41,23 +36,8 @@ public class NeedleListener implements KeyListener {
 		if (e.getKeyCode() == KeyEvent.VK_ENTER) {
 			if (-60 < Jbb.nx && Jbb.nx < 100) {
 				System.out.println("Music");
-				/*
-				 * try { blank = ImageIO.read(new File(
-				 * "C:\\Users\\Matt\\Desktop\\RadImg\\blank.png")); Jbb.backG =
-				 * blank; Jbb.needle = null; Jbb.section = null; NeedleOn =
-				 * false; Jbb.repaint();
-				 * 
-				 * } catch (IOException f) { f.printStackTrace(); }
-				 */
-				Main.frame.remove(Jbb);
-				Main.mPanel.setBackground(Color.black);
-				Main.frame.removeKeyListener(Main.NL);
-
-				KeyListener musicLis = new MusicListener();
-				Main.frame.addKeyListener(musicLis);
-				Main.frame.add(Main.mPanel);
-
-				Main.frame.revalidate();
+				
+				Main.MusicScreen();
 
 			} else {
 				System.out.println("other shit");

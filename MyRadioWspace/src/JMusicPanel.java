@@ -1,7 +1,6 @@
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
-import java.awt.List;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -19,7 +18,7 @@ public class JMusicPanel extends JPanel {
 	Statement stmt = null;
 	public String words = "fucknuggets";
 	public int line = 20;
-	public ArrayList<String> manywords;
+	public static ArrayList<String> manywords;
 	public int selectY;
 	public int pageNum = 0;
 
@@ -49,7 +48,7 @@ public class JMusicPanel extends JPanel {
 			Class.forName("org.sqlite.JDBC");
 			c = DriverManager.getConnection("jdbc:sqlite:test.db");
 
-			System.out.println("Opened database succggggggessfully");
+			System.out.println("Opened database successfully");
 
 			stmt = c.createStatement();
 
@@ -75,5 +74,10 @@ public class JMusicPanel extends JPanel {
 			System.err.println(e.getClass().getName() + ": " + e.getMessage());
 			System.exit(0);
 		}
+	}
+	
+	public static ArrayList<String> getArtists(){
+	//	System.out.println(manywords);
+		return manywords;
 	}
 }

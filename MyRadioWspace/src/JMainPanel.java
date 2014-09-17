@@ -1,13 +1,12 @@
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
-public class JBackgroundPanel extends JPanel {
+@SuppressWarnings("serial")
+public class JMainPanel extends JPanel {
 	public BufferedImage backG;
 	public BufferedImage needle;
 	public BufferedImage music;
@@ -16,7 +15,7 @@ public class JBackgroundPanel extends JPanel {
 	public BufferedImage section;
 	public int nx = 0;
 
-	public JBackgroundPanel() {
+	public JMainPanel() {
 		try {
 			backG = ImageIO.read(this.getClass().getResource(
 					"/Images/tuner.jpg"));
