@@ -102,9 +102,4 @@ public class DatabaseCreation {
 		File[] listOfFiles = parent.listFiles();
 		return listOfFiles;
 	}
-	
-	public void artistList(){
-		
-	}
-	
 }
